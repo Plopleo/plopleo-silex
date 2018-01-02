@@ -1,0 +1,406 @@
+{% extends "layout.html.twig" %}
+
+{% block content %}
+    <!-- Start Featured Slider -->
+    <section id="mu-featured-slider">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="mu-featured-area">
+                        <h1>Léopold Pélissier</h1>
+
+                        <!-- Start text slide -->
+                        <div class="mu-featured-slider-wrapper">
+                            <div class="mu-featured-slider" id="typed-strings">
+                                <p>- <span>Développeur web</span></p>
+                                <p>- <span>Passionné de nouvelles technologies</span></p>
+                                <p>- <span>Adorateur de houmous</span></p>
+                            </div>
+                            <span id="typed"></span>
+                        </div>
+                        <!-- Start text slide -->
+                        {% if false %}
+                        <div class="mu-featured-content">
+                            <a href="#mu-portfolio" class="mu-primary-btn view-my-work-btn">VIEW MY WORK</a>
+                        </div>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Featured Slider -->
+
+    <!-- Start main content -->
+
+    <main role="main">
+
+        <!-- Start About -->
+        <section id="mu-about">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="mu-about-area">
+
+                            <div class="mu-about-header">
+                                <h2 class="mu-heading-title">À PROPOS</h2>
+                                <span class="mu-header-dot"></span>
+                                <p>Après un DUT informatique puis une licence en développement web, je suis maintenant <strong>developpeur back-end. </strong>Je réalise vos prochains <strong>projets web</strong> (sites, API, applications...).</p>
+                            </div>
+
+                            <!-- Start About Us Content -->
+                            <div class="mu-about-content">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="mu-about-content-left">
+                                            <img class="mu-profile-img" src="{{ asset('img/profile.png') }}" alt="Profile Image">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="mu-about-content-right">
+
+                                            <!-- Start skills progress bar -->
+
+                                            <div class="mu-skill-progress-bar">
+                                                <h3>Compétences</h3>
+
+                                                <span>Php</span>
+                                                <div class="mu-pro-bar mu-php-bar"></div>
+
+                                                <span>Symfony</span>
+                                                <div class="mu-pro-bar mu-symfony-bar"></div>
+
+                                                <span>Git</span>
+                                                <div class="mu-pro-bar mu-git-bar"></div>
+
+                                                <span>Js</span>
+                                                <div class="mu-pro-bar mu-js-bar"></div>
+
+                                                <span>Html</span>
+                                                <div class="mu-pro-bar mu-html-bar"></div>
+
+                                                <span>css</span>
+                                                <div class="mu-pro-bar mu-css-bar"></div>
+                                            </div>
+
+                                            <!-- Start Social Media -->
+                                            <div class="mu-social-media">
+                                                <h3>Social</h3>
+                                                <a href="https://www.facebook.com/leopold.pelissier"><i class="fa fa-facebook"></i></a>
+                                                <a href="https://twitter.com/plopleo"><i class="fa fa-twitter"></i></a>
+                                                <a href="https://linkedin.com/in/leopoldpelissier"><i class="fa fa-linkedin"></i></a>
+                                                <a href="https://github.com/plopleo"><i class="fa fa-github"></i></a>
+                                            </div>
+
+                                            <!-- Download Ressume Button -->
+                                            {% if false %}
+                                            <a href="#" class="mu-resume-btn">Download My Resume</a>
+                                            {% endif %}
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- End About Us Content -->
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End About -->
+        {% if false %}
+        <!-- Start Service -->
+        <section id="mu-service">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="mu-service-area">
+
+                            <div class="mu-service-header">
+                                <h2 class="mu-heading-title">MES SERVICES</h2>
+                                <span class="mu-header-dot"></span>
+                            </div>
+                            <!-- Start Service Content -->
+                            <div class="mu-service-content">
+                                <div class="row">
+
+                                    <!-- Service Single Content -->
+                                    <div class="col-md-offset-4 col-md-4 col-sm-6">
+                                        <div class="mu-service-content-single">
+											<span class="mu-service-icon-box">
+												<i class="fa fa-desktop"></i>
+											</span>
+                                            <h4>Développement Web</h4>
+                                            <p>Je réalise vos prochains projets web (sites, API, applications...).</p>
+                                        </div>
+                                    </div>
+                                    <!-- / Service Single Content -->
+
+                                </div>
+                            </div>
+                            <!-- End Service Content -->
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End Service -->
+
+        <!-- Start Portfolio -->
+        <section id="mu-portfolio">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="mu-portfolio-area">
+
+                            <div class="mu-portfolio-header">
+                                <h2 class="mu-heading-title">MY PORTFOLIO</h2>
+                                <span class="mu-header-dot"></span>
+                            </div>
+
+                            <!-- Start Portfolio Filter -->
+                            <div class="mu-portfolio-filter-area">
+                                <ul class="mu-simplefilter">
+                                    <li class="active" data-filter="all">All</li>
+                                    <li data-filter="1">Web App</li>
+                                    <li data-filter="2">UI/UX</li>
+                                    <li data-filter="3">Graphics Design</li>
+                                    <li data-filter="4">Mobile App</li>
+                                    <li data-filter="5">Branding</li>
+                                    <li data-filter="6">Marketing</li>
+                                </ul>
+                            </div>
+
+                            <!-- Start Portfolio Content -->
+                            <div class="mu-portfolio-content">
+                                <div class="filtr-container">
+
+                                    <div class="col-xs-6 col-sm-4 col-md-4 filtr-item" data-category="1">
+                                        <div class="mu-item-thumbonail">
+                                            <img class="img-responsive" src="assets/images/portfolio/img-1.jpeg" alt="image">
+                                        </div>
+                                        <div class="mu-filter-item-content">
+                                            <h4 class="mu-filter-item-title">WEB DEVELOPMENT</h4>
+                                            <a class="mu-filter-link" href="#"><i class="fa fa-link"></i></a>
+                                            <a class="mu-filter-imglink" href="assets/images/portfolio/img-1.jpeg" title="Web Development"><i class="fa fa-search"></i></a>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-xs-6 col-sm-4 col-md-4 filtr-item" data-category="2">
+                                        <div class="mu-item-thumbonail">
+                                            <img class="img-responsive" src="assets/images/portfolio/img-2.jpeg" alt="image">
+                                        </div>
+                                        <div class="mu-filter-item-content">
+                                            <h4 class="mu-filter-item-title">UI/UX DESIGN</h4>
+                                            <a class="mu-filter-link" href="#"><i class="fa fa-link"></i></a>
+                                            <a class="mu-filter-imglink" href="assets/images/portfolio/img-2.jpeg" title="UI/UX DESIGN"><i class="fa fa-search"></i></a>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-xs-6 col-sm-4 col-md-4 filtr-item" data-category="3">
+                                        <div class="mu-item-thumbonail">
+                                            <img class="img-responsive" src="assets/images/portfolio/img-3.jpeg" alt="image">
+                                        </div>
+                                        <div class="mu-filter-item-content">
+                                            <h4 class="mu-filter-item-title">GRAPHICS DESIGN</h4>
+                                            <a class="mu-filter-link" href="#"><i class="fa fa-link"></i></a>
+                                            <a class="mu-filter-imglink" href="assets/images/portfolio/img-3.jpeg" title="GRAPHICS DESIGN"><i class="fa fa-search"></i></a>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-xs-6 col-sm-4 col-md-4 filtr-item" data-category="4">
+                                        <div class="mu-item-thumbonail">
+                                            <img class="img-responsive" src="assets/images/portfolio/img-4.jpeg" alt="image">
+                                        </div>
+                                        <div class="mu-filter-item-content">
+                                            <h4 class="mu-filter-item-title">MOBILE APP</h4>
+                                            <a class="mu-filter-link" href="#"><i class="fa fa-link"></i></a>
+                                            <a class="mu-filter-imglink" href="assets/images/portfolio/img-4.jpeg" title="MOBILE APP"><i class="fa fa-search"></i></a>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-xs-6 col-sm-4 col-md-4 filtr-item" data-category="5">
+                                        <div class="mu-item-thumbonail">
+                                            <img class="img-responsive" src="assets/images/portfolio/img-5.jpeg" alt="image">
+                                        </div>
+                                        <div class="mu-filter-item-content">
+                                            <h4 class="mu-filter-item-title">BRANDING</h4>
+                                            <a class="mu-filter-link" href="#"><i class="fa fa-link"></i></a>
+                                            <a class="mu-filter-imglink" href="assets/images/portfolio/img-5.jpeg" title="BRANDING"><i class="fa fa-search"></i></a>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-xs-6 col-sm-4 col-md-4 filtr-item" data-category="6">
+                                        <div class="mu-item-thumbonail">
+                                            <img class="img-responsive" src="assets/images/portfolio/img-6.jpeg" alt="image">
+                                        </div>
+                                        <div class="mu-filter-item-content">
+                                            <h4 class="mu-filter-item-title">MARKETING</h4>
+                                            <a class="mu-filter-link" href="#"><i class="fa fa-link"></i></a>
+                                            <a class="mu-filter-imglink" href="assets/images/portfolio/img-6.jpeg" title="MARKETING"><i class="fa fa-search"></i></a>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-xs-6 col-sm-4 col-md-4 filtr-item" data-category="1">
+                                        <div class="mu-item-thumbonail">
+                                            <img class="img-responsive" src="assets/images/portfolio/img-7.jpg" alt="image">
+                                        </div>
+                                        <div class="mu-filter-item-content">
+                                            <h4 class="mu-filter-item-title">WEB DEVELOPMENT</h4>
+                                            <a class="mu-filter-link" href="#"><i class="fa fa-link"></i></a>
+                                            <a class="mu-filter-imglink" href="assets/images/portfolio/img-7.jpg" title="WEB DEVELOPMENT"><i class="fa fa-search"></i></a>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-xs-6 col-sm-4 col-md-4 filtr-item" data-category="4">
+                                        <div class="mu-item-thumbonail">
+                                            <img class="img-responsive" src="assets/images/portfolio/img-8.jpeg" alt="image">
+                                        </div>
+                                        <div class="mu-filter-item-content">
+                                            <h4 class="mu-filter-item-title">MOBILE APP</h4>
+                                            <a class="mu-filter-link" href="#"><i class="fa fa-link"></i></a>
+                                            <a class="mu-filter-imglink" href="assets/images/portfolio/img-8.jpeg" title="MOBILE APP"><i class="fa fa-search"></i></a>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-xs-6 col-sm-4 col-md-4 filtr-item" data-category="3">
+                                        <div class="mu-item-thumbonail">
+                                            <img class="img-responsive" src="assets/images/portfolio/img-9.jpeg" alt="image">
+                                        </div>
+                                        <div class="mu-filter-item-content">
+                                            <h4 class="mu-filter-item-title">GRAPHICS DESIGN</h4>
+                                            <a class="mu-filter-link" href="#"><i class="fa fa-link"></i></a>
+                                            <a class="mu-filter-imglink" href="assets/images/portfolio/img-9.jpeg" title="GRAPHICS DESIGN"><i class="fa fa-search"></i></a>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <!-- End Portfolio Content -->
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End Portfolio -->
+
+        <!-- Start Testimonials -->
+        <section id="mu-testimonials">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="mu-testimonials-area">
+                            <div class="mu-testimonial-header">
+                                <h2 class="mu-heading-title">Client Testimonials</h2>
+                                <span class="mu-header-dot"></span>
+                            </div>
+
+                            <div class="mu-testimonials-block">
+                                <ul class="mu-testimonial-slide">
+
+                                    <li>
+                                        <i class="fa fa-quote-right mu-quote-icon"></i>
+                                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever.</p>
+                                        <h5 class="mu-ct-name"> - Jhon Doe</h5>
+                                        <span class="mu-ct-title">CEO, Apple Inc.</span>
+                                    </li>
+
+                                    <li>
+                                        <i class="fa fa-quote-right mu-quote-icon"></i>
+                                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever.</p>
+                                        <h5 class="mu-ct-name"> - Alice Boga</h5>
+                                        <span class="mu-ct-title">Director, Google Inc.</span>
+                                    </li>
+
+                                    <li>
+                                        <i class="fa fa-quote-right mu-quote-icon"></i>
+                                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever.</p>
+                                        <h5 class="mu-ct-name"> - Jhon Smith</h5>
+                                        <span class="mu-ct-title">Web Developer</span>
+                                    </li>
+
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End Testimonials -->
+        {% endif %}
+
+
+        <!-- Start Contact -->
+        <section id="mu-contact">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="mu-contact-area">
+
+                            <div class="mu-contact-header">
+                                <h2 class="mu-heading-title">CONTACT</h2>
+                                <span class="mu-header-dot"></span>
+                            </div>
+
+                            <!-- Start Contact Content -->
+                            <div class="mu-contact-content">
+                                <div class="row">
+
+                                    <div class="col-md-12">
+                                        <div class="mu-contact-top">
+
+                                            <div class="row">
+                                                <div class="col-sm-offset-2 col-sm-4">
+                                                    <div class="mu-contact-top-single">
+                                                        <div class="mu-icon"><i class="fa fa-map-marker"></i></div>
+                                                        <p>Lyon, France</p>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-4">
+                                                    <div class="mu-contact-top-single">
+                                                        <div class="mu-icon"><i class="fa fa-twitter"></i></div>
+                                                        <p>@plopleo</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-12">
+                                        <div class="mu-contact-bottom">
+                                            <div id="form-messages"></div>
+                                            <form id="ajax-contact" method="post" class="mu-contact-form">
+                                                <div class="form-group">
+                                                    <input type="text" class="form-control" placeholder="Nom" id="name" name="name" required>
+                                                </div>
+                                                <div class="form-group">
+                                                    <input type="email" class="form-control" placeholder="Email" id="email" name="email" required>
+                                                </div>
+                                                <div class="form-group">
+                                                    <textarea class="form-control" placeholder="Message" id="message" name="message" required></textarea>
+                                                </div>
+                                                <button type="submit" class="mu-send-msg-btn"><span>Envoyer</span></button>
+                                            </form>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <!-- End Contact Content -->
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End Contact -->
+
+    </main>
+
+    <!-- End main content -->
+
+{% endblock %}

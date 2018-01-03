@@ -6,24 +6,32 @@ use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
-//Request::setTrustedProxies(array('127.0.0.1'));
-
 $app->get('/', function () use ($app) {
     return $app['twig']->render('index.html.twig', array());
 })
     ->bind('homepage');
+
+$app->post('/contact', function (Request $request, Silex\Application $app) {
+    $name = $request->get('name');
+    $email = $request->get('email');
+    $message = $request->get('message');
+
+    $content = 'Nom : ' . $app->escape($name) . ' || ';
+    $content .= 'Email : ' . $app->escape($email) . ' || ';
+    $content .= 'Message : ' . $app->escape($message);
+
+    mail('leopold.pelissier@gmail.com', '[Plopleo] Contact', $content);
+
+    return new Response('Merci pour votre message !', 201);
+});
 
 $app->error(function (\Exception $e, Request $request, $code) use ($app) {
     if ($app['debug']) {
         return;
     }
 
-    // 404.html, or 40x.html, or 4xx.html, or error.html
     $templates = array(
-        'errors/' . $code . '.html.twig',
-        'errors/' . substr($code, 0, 2) . 'x.html.twig',
-        'errors/' . substr($code, 0, 1) . 'xx.html.twig',
-        'errors/default.html.twig',
+        'errors/error.html.twig',
     );
 
     return new Response($app['twig']->resolveTemplate($templates)->render(array('code' => $code)), $code);

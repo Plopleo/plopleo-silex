@@ -1,0 +1,26 @@
+{% extends "layout.html.twig" %}
+
+{% block navigation %}{% endblock %}
+
+{% block content %}
+    <section id="mu-featured-slider">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="mu-featured-area">
+                        <h1>Léopold Pélissier</h1>
+
+                        <!-- Start text slide -->
+                        <div class="mu-featured-slider-wrapper">
+                            <div class="mu-featured-slider" id="typed-strings">
+                                <p>- <span>Error</span></p>
+                                <p>- <span>{{ code }}</span></p>
+                            </div>
+                            <span id="typed"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

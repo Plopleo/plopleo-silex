@@ -1,6 +1,6 @@
 {% extends "layout.html.twig" %}
 
-{% block navigation %}{% endblock %}
+{% block title %}{{ code }}{% endblock %}
 
 {% block content %}
     <section id="mu-featured-slider">
@@ -13,8 +13,8 @@
                         <!-- Start text slide -->
                         <div class="mu-featured-slider-wrapper">
                             <div class="mu-featured-slider" id="typed-strings">
-                                <p>- <span>Error</span></p>
-                                <p>- <span>{{ code }}</span></p>
+                                <p>- <span>Erreur {{ code }}</span></p>
+                                <p>- <span>:'(</span></p>
                             </div>
                             <span id="typed"></span>
                         </div>

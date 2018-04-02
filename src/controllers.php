@@ -20,7 +20,14 @@ $app->post('/contact', function (Request $request, Silex\Application $app) {
     $content .= 'Email : ' . $app->escape($email) . ' || ';
     $content .= 'Message : ' . $app->escape($message);
 
-    mail('leopold.pelissier@gmail.com', '[Plopleo] Contact', $content);
+    $message = new Swift_Message();
+    $message
+        ->setSubject('[PLOPLEO] new message')
+        ->setFrom(array('noreply@plopleo.com'))
+        ->setTo(array('leopold.pelissier@gmail.com'))
+        ->setBody($content);
+
+    $app['mailer']->send($message);
 
     return new Response('Merci pour votre message !', 201);
 });

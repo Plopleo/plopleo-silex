@@ -1,3 +1,5 @@
 /vendor/
 .idea/
 var/
+config/prod.php
+config/dev.php
